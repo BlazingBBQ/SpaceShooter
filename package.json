@@ -1,0 +1,30 @@
+{
+  "name": "funwithnode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "npm-run-all -p nodemon webpack",
+    "nodemon": "nodemon server.js",
+    "webpack": "npx webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^9.6.1",
+    "@types/socket.io": "^1.4.32",
+    "@types/socket.io-client": "^1.4.32",
+    "express": "^4.16.3",
+    "npm-run-all": "^4.1.2",
+    "roughjs": "^2.2.5",
+    "socket.io": "^2.0.4",
+    "ts-loader": "^4.1.0",
+    "typescript": "^2.8.1",
+    "webpack": "^4.3.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^2.0.13"
+  }
+}
