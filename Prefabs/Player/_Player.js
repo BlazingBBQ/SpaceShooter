@@ -1,7 +1,7 @@
 var playerSpeed = 0.2;
 var playerHealth = 100;
-var playerWidth = 4;
-var playerHeight = 6;
+var playerWidth = 8;
+var playerHeight = 8;
 var playerViewRange = 1 / 2;
 
 function generateNew(obs, src, posX, posY) {
@@ -82,6 +82,19 @@ function generateNew(obs, src, posX, posY) {
     
                 player.velocityX = xDir * player.speed;
                 player.velocityY = yDir * player.speed;
+
+                if (xDir != 0 || yDir != 0) {
+                    player.facing = (Math.atan(player.velocityY / player.velocityX) * 57.2958 + 90) +(xDir < 0 ? 180 : 0);
+                }
+
+                if (xDir != 0) {
+                    player.hitboxWidth = obs[selfId].height;
+                    player.hitboxHeight = obs[selfId].width;
+                }
+                if (yDir != 0) {
+                    player.hitboxWidth = obs[selfId].width;
+                    player.hitboxHeight = obs[selfId].height;
+                }
         
                 if (playerInput.cycleEquipmentForward && !playerInput.cycleEquipmentBackward && obs[selfId].currentEquipment != undefined) {
                     player.equipment[player.currentEquipment].onDequip(obs, selfId);

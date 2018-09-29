@@ -11,7 +11,7 @@ export function healthBarMasterPiece(object: any, renderOffsetX: number, renderO
     return {
         palette: ["#00a400", "#FF0000"],
         posX: object.x - renderOffsetX,
-        posY: object.y - renderOffsetY - (object.height + 2) * cubeSize / 2,
+        posY: object.y - renderOffsetY - (object.height + 4) * cubeSize / 2,
         width: object.width,
         height: 1,
         facing: 0,

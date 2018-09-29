@@ -1,4 +1,4 @@
-import { masterPiece } from "../../src/Popova/Popova";
+import { masterPiece, StrokeTypes } from "../../src/Popova/Popova";
 
 /**
  * Get master piece for player object
@@ -8,48 +8,17 @@ import { masterPiece } from "../../src/Popova/Popova";
  */
 export function playerMasterPiece(object: any, renderOffsetX: number, renderOffsetY: number): masterPiece {
     return {
-        palette: ["#abab9a", "#775050", "#AAAAAA", "#000080"],
+        palette: ["#999999"],
         posX: object.x - renderOffsetX,
         posY: object.y - renderOffsetY,
         width: object.width,
         height: object.height,
-        facing: 0,
+        facing: object.facing,
+        shadowHeight: 6,
         strokes: [{
-            cellX: 0,
-            cellY: 2,
-            width: 4,
-            height: 2,
-            swatch: 3
-        }, {
-            cellX: 1,
-            cellY: 0,
-            width: 2,
-            height: 2,
-            swatch: 0
-        }, {
-            cellX: 0,
-            cellY: 3,
-            width: 1,
-            height: 1,
-            swatch: 2
-        }, {
-            cellX: 3,
-            cellY: 3,
-            width: 1,
-            height: 1,
-            swatch: 2
-        }, {
-            cellX: 1,
-            cellY: 4,
-            width: 1,
-            height: 2,
-            swatch: 1
-        }, {
-            cellX: 2,
-            cellY: 4,
-            width: 1,
-            height: 2,
-            swatch: 1
-        }],
+            type: StrokeTypes.SVG,
+            path: 'M 8 32 L 8 32 Q 4 12 16 0 Q 28 12 24 32 Q 16 16 8 32', 
+            params: { fill: '#992222', fillStyle: 'solid', strokeWidth: 0.2 }
+        }]
     }
 }
