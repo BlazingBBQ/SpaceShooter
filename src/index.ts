@@ -48,7 +48,7 @@ var KEY_CYCLE_EQUIPMENT_FORWARD = 69;   // Default to E
 var KEY_CYCLE_EQUIPMENT_BACKWARD = 81;  // Default to Q
 var KEY_USE_EQUIPMENT = 82              // Default to R
 var KEY_PICKUP = 70;                    // Default to F
-var KEY_ABILITY_1 = 49;                 // Default to 1
+var KEY_ABILITY_1 = 32;                 // Default to SPACE
 var KEY_ABILITY_2 = 50;                 // Default to 2
 var KEY_ABILITY_3 = 51;                 // Default to 3
 var KEY_ABILITY_4 = 52;                 // Default to 4
@@ -225,7 +225,7 @@ socket.on("state", (objects: any) => {
     // TODO: Draw background map (instead of/with grid)
     if (!!objects) {
         background.wipeCanvas();
-        // background.drawGrid(gridSize, -renderOffsetX, -renderOffsetY);
+        background.drawGrid(gridSize, -renderOffsetX, -renderOffsetY);
     }
 
     if (debug) {
@@ -236,7 +236,7 @@ socket.on("state", (objects: any) => {
     louvre.renderCurrentEquipment(player, equipmentIconPosX, equipmentIconPosY, ui);
 
     // Render player's abilities
-    louvre.renderAbilities(player, ui);
+    louvre.renderAbilities(player, ui);      // Ability rendering disabled
 
     // Render objects
     louvre.renderObjects(objects, renderOffsetX, renderOffsetY, cubeSize, background, env, foreground, cover, ui);

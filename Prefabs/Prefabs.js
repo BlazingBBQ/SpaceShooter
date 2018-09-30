@@ -47,6 +47,7 @@ var firebolt = require("./Abilities/Firebolt");
 var flamePillar = require("./Abilities/FlamePillar");
 var flameDash = require("./Abilities/FlameDash");
 var flameBarrier = require("./Abilities/FlameBarrier");
+var shoot = require("./Abilities/Shoot");
 
 var _combatText = require("./CombatText/_CombatText");
 var damageText = require("./CombatText/DamageText");
@@ -249,6 +250,8 @@ module.exports = {
                 return flameDash.generateNew(obs);
             case types.Abilities.FLAME_BARRIER:
                 return flameBarrier.generateNew(obs);
+            case types.Abilities.SHOOT:
+                return shoot.generateNew(obs);
         }
     },
 }

@@ -60,6 +60,7 @@ module.exports = {
         FLAME_PILLAR: "flame-pillar",
         FLAME_DASH: "flame-dash",
         FLAME_BARRIER: "flame-barrier",
+        SHOOT: "shoot",
     },
     StatusEffects: {
         STUNNED: "stunned",

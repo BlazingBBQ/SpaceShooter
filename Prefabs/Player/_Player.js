@@ -27,7 +27,9 @@ function generateNew(obs, src, posX, posY) {
         maxHealth: playerHealth,
         currentEquipment: undefined,
         equipment: [ ],
-        abilities: [ ],
+        abilities: [
+            prefabs.newAbility(obs, types.Abilities.SHOOT),
+        ],
         statusEffects: { },
         viewRange: playerViewRange,
         deathrattle: (obs, selfRef) => {
