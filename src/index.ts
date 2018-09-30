@@ -225,7 +225,7 @@ socket.on("state", (objects: any) => {
     // TODO: Draw background map (instead of/with grid)
     if (!!objects) {
         background.wipeCanvas();
-        background.drawGrid(gridSize, -renderOffsetX, -renderOffsetY);
+        // background.drawGrid(gridSize, -renderOffsetX, -renderOffsetY);
     }
 
     if (debug) {

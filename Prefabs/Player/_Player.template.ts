@@ -18,7 +18,7 @@ export function playerMasterPiece(object: any, renderOffsetX: number, renderOffs
         strokes: [{
             type: StrokeTypes.SVG,
             path: 'M 8 32 L 8 32 Q 4 12 16 0 Q 28 12 24 32 Q 16 16 8 32', 
-            params: { fill: '#992222', fillStyle: 'solid', strokeWidth: 0.2 }
+            params: { fill: '#333333', fillStyle: 'solid', strokeWidth: 0.2 }
         }]
     }
 }
